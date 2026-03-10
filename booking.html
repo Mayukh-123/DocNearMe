@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - DocNearMe</title>
+    <style>* { font-family: Arial, sans-serif; }</style>
+</head>
+<body bgcolor="#080838">
+
+<header>
+  <div style="display:flex; align-items:center;">
+    <img 
+      src="DocNearMe-logo.svg" 
+      alt="DocNearMe Logo" 
+      style="width:300px;">
+    <div>
+      <h1 style="color:#38BDF8; font-size:35px;">
+        Your Health, Our Priority 🏥
+      </h1>
+      <p style="color:#D1D5DB; font-size:18px;">Connecting patients with trusted doctors since 2026.</p>
+      <p style="color:#D1D5DB; font-size:18px;">Fast. Reliable. Always near you. 📍</p>
+    </div>
+  </div>
+  <hr style="border: 2px solid #00b894; width:100%; margin:0;">
+</header>
+
+<br><br>
+
+<!-- HEADING -->
+<section style="text-align:center; padding:20px;">
+  <h1 style="color:#38BDF8; font-size:50px;">📅 Book An Appointment</h1>
+  <p style="color:#D1D5DB; font-size:20px;">Fill in your details and we'll confirm your slot!</p>
+</section>
+
+<hr style="border: 1px solid #38BDF8; width: 90%;">
+
+<!-- CLINIC TIMINGS -->
+<section style="text-align:center; padding:40px;">
+  <h2 style="color:#38BDF8; font-size:35px;">🕐 Clinic Timings</h2>
+  <br>
+  <div style="display:flex; justify-content:space-around;">
+
+    <div style="background-color:#0a2a5e; padding:25px; border-radius:15px; text-align:center; width:200px;">
+      <h3 style="color:#00b894; font-size:20px;">Monday - Friday</h3>
+      <p style="color:#D1D5DB; font-size:18px;">9:00 AM – 1:00 PM</p>
+      <p style="color:#D1D5DB; font-size:18px;">4:00 PM – 8:00 PM</p>
+    </div>
+
+    <div style="background-color:#0a2a5e; padding:25px; border-radius:15px; text-align:center; width:200px;">
+      <h3 style="color:#00b894; font-size:20px;">Saturday</h3>
+      <p style="color:#D1D5DB; font-size:18px;">9:00 AM – 2:00 PM</p>
+      <p style="color:#D1D5DB; font-size:18px;">Closed in Evening</p>
+    </div>
+
+    <div style="background-color:#0a2a5e; padding:25px; border-radius:15px; text-align:center; width:200px;">
+      <h3 style="color:#ff4757; font-size:20px;">Sunday</h3>
+      <p style="color:#D1D5DB; font-size:18px;">Emergency Only</p>
+      <p style="color:#D1D5DB; font-size:18px;">📞 +91 98765 43210</p>
+    </div>
+
+  </div>
+</section>
+
+<hr style="border: 1px solid #38BDF8; width: 90%;">
+
+<!-- CLINIC ADDRESS -->
+<section style="text-align:center; padding:40px;">
+  <h2 style="color:#38BDF8; font-size:35px;">📍 Our Location</h2>
+  <br>
+  <div style="background-color:#0a2a5e; padding:30px; border-radius:15px; width:50%; margin:auto;">
+    <p style="color:#D1D5DB; font-size:20px;">🏥 DocNearMe Clinic</p>
+    <p style="color:#D1D5DB; font-size:20px;">123, Health Street, Andheri West</p>
+    <p style="color:#D1D5DB; font-size:20px;">Mumbai, Maharashtra - 400058</p>
+    <p style="color:#D1D5DB; font-size:20px;">📞 +91 98765 43210</p>
+    <p style="color:#D1D5DB; font-size:20px;">📧 appointments@docnearme.com</p>
+  </div>
+</section>
+
+<hr style="border: 1px solid #38BDF8; width: 90%;">
+
+<!-- BOOKING FORM -->
+<section style="text-align:center; padding:40px;">
+  <h2 style="color:#38BDF8; font-size:35px;">📋 Fill Your Details</h2>
+  <br>
+  <div style="background-color:#0a2a5e; padding:30px; border-radius:15px; width:50%; margin:auto;">
+
+    <form action="https://formspree.io/f/xpqypwyr" method="POST">
+
+      <!-- Hidden field auto filled with doctor name -->
+      <input type="hidden" id="doctorName" name="doctor_name">
+
+      <p style="color:#D1D5DB; font-size:18px; text-align:left;">Your Name</p>
+      <input type="text" name="name" placeholder="Enter your full name" required
+        style="width:100%; padding:14px; font-size:18px; border-radius:10px; border:none; margin-bottom:20px;">
+
+      <p style="color:#D1D5DB; font-size:18px; text-align:left;">Phone Number</p>
+      <input type="tel" name="phone" placeholder="Enter your phone number" required
+        style="width:100%; padding:14px; font-size:18px; border-radius:10px; border:none; margin-bottom:20px;">
+
+      <p style="color:#D1D5DB; font-size:18px; text-align:left;">Doctor Specialty</p>
+      <input type="text" id="specialtyField" name="specialty" placeholder="e.g. Eye Specialist, Dentist..." required
+        style="width:100%; padding:14px; font-size:18px; border-radius:10px; border:none; margin-bottom:20px;">
+
+      <p style="color:#D1D5DB; font-size:18px; text-align:left;">Preferred Date</p>
+      <input type="date" name="date" required
+        style="width:100%; padding:14px; font-size:18px; border-radius:10px; border:none; margin-bottom:20px;">
+
+      <p style="color:#D1D5DB; font-size:18px; text-align:left;">Preferred Time</p>
+      <select name="time" required
+        style="width:100%; padding:14px; font-size:18px; border-radius:10px; border:none; margin-bottom:20px;">
+        <option value="">Select a time slot</option>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+        <option value="5:00 PM">5:00 PM</option>
+        <option value="6:00 PM">6:00 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+      </select>
+
+      <p style="color:#D1D5DB; font-size:18px; text-align:left;">Additional Notes</p>
+      <textarea name="notes" placeholder="Any symptoms or notes for the doctor..." rows="4"
+        style="width:100%; padding:14px; font-size:18px; border-radius:10px; border:none; margin-bottom:20px;"></textarea>
+
+      <button type="submit" style="
+        background-color:#00b894;
+        color:white;
+        padding:14px 60px;
+        font-size:20px;
+        border:none;
+        border-radius:30px;
+        cursor:pointer;">
+        📅 Confirm Appointment
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<br>
+
+<footer style="text-align:center; padding:20px;">
+  <hr style="border:1px solid #38BDF8; width:90%;">
+  <p style="color:#D1D5DB;">© 2026 DocNearMe. All rights reserved.</p>
+  <p style="color:#D1D5DB;">Made with ❤️ by Mayukh Rangnekar and SHAIKH MOHD ALI</p>
+</footer>
+
+<script>
+  var params = new URLSearchParams(window.location.search);
+  var doctor = params.get("doctor");
+  var specialty = params.get("specialty");
+  if (doctor) { document.getElementById("doctorName").value = doctor; }
+  if (specialty) { document.getElementById("specialtyField").value = specialty; }
+</script>
+
+</body>
+</html>
