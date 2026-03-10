@@ -1,204 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,intial-scale=1.0">
-    <title>DocNearMe - Find Doctors Near You</title>
-    <body bgcolor="#080838" style="font-family: Arial;">   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DocNearMe - Find Doctors Near You</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background-color:#F4F8FB;
+}
+
+/* HEADER */
+header{
+background:#0F172A;
+padding:15px 0;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 25px;
+font-size:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38BDF8;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:50px;
+color:#072b3b;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#444;
+}
+
+/* SEARCH */
+
+.search-box{
+display:flex;
+justify-content:center;
+margin-top:30px;
+}
+
+.search-box input{
+padding:18px;
+width:350px;
+border-radius:30px 0 0 30px;
+border:none;
+font-size:18px;
+}
+
+.search-box button{
+padding:18px 25px;
+background:#00b894;
+color:white;
+border:none;
+border-radius:0 30px 30px 0;
+font-size:18px;
+cursor:pointer;
+}
+
+/* SECTION TITLES */
+
+.section-title{
+text-align:center;
+font-size:35px;
+color:#0F172A;
+margin:50px 0 20px;
+}
+
+/* DOCTOR CARDS */
+
+.doctors{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+width:220px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin:10px 0;
+color:#0F172A;
+}
+
+.card p{
+margin:5px;
+color:#555;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#00b894;
+border:none;
+border-radius:20px;
+color:white;
+cursor:pointer;
+}
+
+/* FEATURES */
+
+.features{
+display:flex;
+justify-content:center;
+gap:60px;
+text-align:center;
+flex-wrap:wrap;
+margin:40px 0;
+}
+
+.features div{
+width:200px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0F172A;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+</style>
 </head>
- <div style="display:flex; align-items:center;">
 
-  <!-- Logo -->
-  <img 
-    src="DocNearMe-logo.svg" 
-    alt="DocNearMe Logo" 
-    style="width:400px;">
+<body>
 
-  <!-- Tagline -->
-  <h1 style="color:#38BDF8; font-size:35px;">
-    Your Health, Our Priority 🏥
-  </h1>
-
-</div>
 <header>
-
-
-<h1 style="color:#38BDF8; text-align:center; font-size:50px;"><u>DocNearMe</u></h1>
-<marquee scrollamount="15" style="color:#D1D5DB; font-size:30px"><b>Book verified local doctors in seconds. No waiting, no hassle!!!</b></marquee>
-<nav style="text-align:center;"><b><br>
-    <hr style="
-  border: 2px solid #38BDF8;
-  width: 100%;
-">
-   <a href="about1.html" style="color:#FFEB3B; margin:30px; font-size:30px;">About</a>
-   <a href="" style="color:#FFEB3B; margin:30px; font-size:30px;">Find Doctor</a>
-   <a href="home2.html" style="color:#FFEB3B; margin:30px; font-size:30px;">Home</a>
-   <a href="contact.html" style="color:#FFEB3B; margin:30px; font-size:30px;">Contact</a>
-</b> 
+<nav>
+<a href="index.html">Home</a>
+<a href="booking.html">Find Doctor</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
 </header>
-<section style="text-align:center;">
 
-  <h2 style="color:#38BDF8; font-size:45px;">How It Works</h2>
-  <br>
+<section class="hero">
 
-  <div style="display:flex; justify-content:space-around; align-items:center;">
+<h1>DocNearMe</h1>
+<p>Your Health, Our Priority 🏥</p>
 
-    <!-- LEFT SIDE — Steps (under How It Works) -->
-    <div style="text-align:left;">
-      <div>
-        <h3 style="color:#D1D5DB; font-size:35px;"><u>Step 1 - Search</u></h3>
-        <p style="color:#D1D5DB; font-size:25px;">Enter your location and doctor specialty</p>
-      </div>
-      <br>
-      <div>
-        <h3 style="color:#D1D5DB; font-size:35px;"><u>Step 2 - Book</u></h3>
-        <p style="color:#D1D5DB; font-size:25px;">Pick a time slot that works for you</p>
-      </div>
-      <br>
-      <div>
-        <h3 style="color:#D1D5DB; font-size:35px;"><u>Step 3 - Visit</u></h3>
-        <p style="color:#D1D5DB; font-size:25px;">Walk in and get treated. Simple!</p>
-      </div>
-    </div>
+<div class="search-box">
 
-    <div style="text-align:center;">
+<input type="text" id="searchInput" placeholder="Search doctor or specialty...">
 
-  <form onsubmit="searchDoctor(event)" style="display:flex; justify-content:center; align-items:center;">
-    
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search doctor or specialty..."
-      style="padding:24px 20px; font-size:20px; border-radius:30px 0 0 30px; border:none; width:350px;">
-
-    <button type="submit" style="
-      background-color:#00b894;
-      color:white;
-      padding:24px 30px;
-      font-size:20px;
-      border:none;
-      border-radius:0 30px 30px 0;
-      cursor:pointer;">
-      🔍 Search
-    </button>
-
-  </form>
-
-  <!-- Doctor result appears here -->
-  <div id="results" style="margin-top:20px;"></div>
+<button onclick="searchDoctor()">Search</button>
 
 </div>
 
-  </div>
+<div id="results" style="margin-top:30px;"></div>
+
 </section>
-<h2 style="color:#38BDF8; text-align:center;">Our Top Doctors</h2>
-<br>
-<div style="display:flex; justify-content:space-around;">
 
-  <div style="background-color:#0a2a5e; padding:20px; border-radius:15px; text-align:center; width:200px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80px">
-    <h3 style="color:white;">Dr. Aryan Shah</h3>
-    <p style="color:#00b894;">Cardiologist</p>
-    <p style="color:#D1D5DB;">⭐⭐⭐⭐⭐</p>
-    <p style="color:#D1D5DB;">📍 Mumbai</p>
-  </div>
+<h2 class="section-title">Our Top Doctors</h2>
 
-  <div style="background-color:#0a2a5e; padding:20px; border-radius:15px; text-align:center; width:200px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80px">
-    <h3 style="color:white;">Dr. Priya Mehta</h3>
-    <p style="color:#00b894;">Dermatologist</p>
-    <p style="color:#D1D5DB;">⭐⭐⭐⭐⭐</p>
-    <p style="color:#D1D5DB;">📍 Delhi</p>
-  </div>
+<div class="doctors">
 
-  <div style="background-color:#0a2a5e; padding:20px; border-radius:15px; text-align:center; width:200px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80px">
-    <h3 style="color:white;">Dr. Rohan Verma</h3>
-    <p style="color:#00b894;">Dentist</p>
-    <p style="color:#D1D5DB;">⭐⭐⭐⭐⭐</p>
-    <p style="color:#D1D5DB;">📍 Bangalore</p>
-  </div>
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80">
+<h3>Dr. Aryan Shah</h3>
+<p>Cardiologist</p>
+<p>📍 Mumbai</p>
+<button>Book</button>
+</div>
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80">
+<h3>Dr. Priya Mehta</h3>
+<p>Dermatologist</p>
+<p>📍 Delhi</p>
+<button>Book</button>
+</div>
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80">
+<h3>Dr. Rohan Verma</h3>
+<p>Dentist</p>
+<p>📍 Bangalore</p>
+<button>Book</button>
+</div>
 
 </div>
-<h2 style="color:#38BDF8; text-align:center;">Why DocNearMe?</h2>
-<br>
-<div style="display:flex; justify-content:space-around; text-align:center;">
 
-  <div>
-    <h1>✅</h1>
-    <h3 style="color:white;">Verified Doctors</h3>
-    <p style="color:#D1D5DB;">All doctors are certified & trusted</p>
-  </div>
+<h2 class="section-title">Why DocNearMe?</h2>
 
-  <div>
-    <h1>📅</h1>
-    <h3 style="color:white;">Easy Booking</h3>
-    <p style="color:#D1D5DB;">Book a slot in under 30 seconds</p>
-  </div>
+<div class="features">
 
-  <div>
-    <h1>📍</h1>
-    <h3 style="color:white;">Near You</h3>
-    <p style="color:#D1D5DB;">Find doctors in your area instantly</p>
-  </div>
+<div>
+<h2>✅</h2>
+<h3>Verified Doctors</h3>
+<p>All doctors are certified professionals.</p>
+</div>
 
-  <div>
-    <h1>⭐</h1>
-    <h3 style="color:white;">Trusted Reviews</h3>
-    <p style="color:#D1D5DB;">Real ratings from real patients</p>
-  </div>
+<div>
+<h2>📅</h2>
+<h3>Easy Booking</h3>
+<p>Book appointments in seconds.</p>
+</div>
+
+<div>
+<h2>📍</h2>
+<h3>Near You</h3>
+<p>Find doctors in your area instantly.</p>
+</div>
+
+<div>
+<h2>⭐</h2>
+<h3>Trusted Reviews</h3>
+<p>Real ratings from real patients.</p>
+</div>
 
 </div>
-<script>
-function searchDoctor(event) {
-  event.preventDefault();
-  var query = document.getElementById("searchInput").value.toLowerCase();
-  var results = document.getElementById("results");
 
-  var doctors = {
-    "eye": { name: "Dr. Sneha Iyer", specialty: "Eye Specialist", location: "Mumbai", rating: "⭐⭐⭐⭐⭐" },
-    "heart": { name: "Dr. Aryan Shah", specialty: "Cardiologist", location: "Delhi", rating: "⭐⭐⭐⭐⭐" },
-    "cardio": { name: "Dr. Aryan Shah", specialty: "Cardiologist", location: "Delhi", rating: "⭐⭐⭐⭐⭐" },
-    "skin": { name: "Dr. Priya Mehta", specialty: "Dermatologist", location: "Bangalore", rating: "⭐⭐⭐⭐⭐" },
-    "derm": { name: "Dr. Priya Mehta", specialty: "Dermatologist", location: "Bangalore", rating: "⭐⭐⭐⭐⭐" },
-    "teeth": { name: "Dr. Rohan Verma", specialty: "Dentist", location: "Mumbai", rating: "⭐⭐⭐⭐⭐" },
-    "dental": { name: "Dr. Rohan Verma", specialty: "Dentist", location: "Mumbai", rating: "⭐⭐⭐⭐⭐" },
-    "dentist": { name: "Dr. Rohan Verma", specialty: "Dentist", location: "Mumbai", rating: "⭐⭐⭐⭐⭐" },
-    "brain": { name: "Dr. Kavya Nair", specialty: "Neurologist", location: "Chennai", rating: "⭐⭐⭐⭐⭐" },
-    "neuro": { name: "Dr. Kavya Nair", specialty: "Neurologist", location: "Chennai", rating: "⭐⭐⭐⭐⭐" },
-    "bone": { name: "Dr. Rahul Desai", specialty: "Orthopedic", location: "Pune", rating: "⭐⭐⭐⭐⭐" },
-    "ortho": { name: "Dr. Rahul Desai", specialty: "Orthopedic", location: "Pune", rating: "⭐⭐⭐⭐⭐" }
-  };
+<footer>
 
-  var found = null;
-  for (var key in doctors) {
-    if (query.includes(key)) {
-      found = doctors[key];
-      break;
-    }
-  }
+<p>© 2026 DocNearMe</p>
+<p>Made by Mayukh Rangnekar & Shaikh Mohd Ali</p>
 
-  if (found) {
-    results.innerHTML =
-      '<div style="background-color:#0a2a5e; padding:30px; border-radius:15px; width:250px; margin:auto; text-align:center;">' +
-        '<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80px"><br><br>' +
-        '<h3 style="color:white; font-size:22px;">' + found.name + '</h3>' +
-        '<p style="color:#00b894; font-size:18px;">' + found.specialty + '</p>' +
-        '<p style="color:#D1D5DB;">' + found.rating + '</p>' +
-        '<p style="color:#D1D5DB;">📍 ' + found.location + '</p><br>' +
-        '<a href="booking.html?doctor=' + found.name + '&specialty=' + found.specialty + '" style="background-color:#00b894; color:white; padding:12px 30px; border-radius:20px; text-decoration:none; font-size:18px;">📅 Book Appointment</a>' +
-      '</div>';
-  } else {
-    results.innerHTML = '<p style="color:#ff4757; font-size:20px;">❌ No doctor found. Try: eye, heart, skin, teeth, brain, bone</p>';
-  }
-}
-</script>
-<footer style="text-align:center; padding:20px;">
-  <hr style="border:1px solid #38BDF8; width:90%;">
-  <p style="color:#D1D5DB;">© 2026 DocNearMe. All rights reserved.</p>
-  <p style="color:#D1D5DB;">Made with ❤️ by Mayukh Rangnekar and SHAIKH MOHD ALI</p>
-  
 </footer>
+
+<script>
+
+function searchDoctor(){
+
+var query=document.getElementById("searchInput").value.toLowerCase();
+var results=document.getElementById("results");
+
+var doctors={
+"eye":"Dr Sneha Iyer - Eye Specialist (Mumbai)",
+"heart":"Dr Aryan Shah - Cardiologist (Delhi)",
+"skin":"Dr Priya Mehta - Dermatologist (Bangalore)",
+"teeth":"Dr Rohan Verma - Dentist (Mumbai)",
+"brain":"Dr Kavya Nair - Neurologist (Chennai)",
+"bone":"Dr Rahul Desai - Orthopedic (Pune)"
+};
+
+for(var key in doctors){
+
+if(query.includes(key)){
+results.innerHTML="<h3>"+doctors[key]+"</h3>";
+return;
+}
+
+}
+
+results.innerHTML="<p style='color:red'>No doctor found</p>";
+
+}
+
+</script>
+
 </body>
 </html>

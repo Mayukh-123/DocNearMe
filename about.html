@@ -1,92 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - DocNearMe</title>
-  <style>* { font-family: Arial, sans-serif; }</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us - DocNearMe</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background-color:#dceeff;
+}
+
+/* NAVBAR */
+
+nav{
+text-align:center;
+padding:20px;
+background-color:#0a2a5e;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:20px;
+font-size:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38BDF8;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.header img{
+width:250px;
+margin-right:20px;
+}
+
+.header h1{
+color:#072b3b;
+font-size:32px;
+}
+
+/* SECTION */
+
+section{
+text-align:center;
+padding:40px;
+}
+
+.section-title{
+color:#043448;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.section-text{
+color:#072b3b;
+font-size:20px;
+width:60%;
+margin:auto;
+line-height:1.6;
+}
+
+/* TEAM CARDS */
+
+.team{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background-color:#0a2a5e;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:250px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:white;
+}
+
+.card p{
+color:#D1D5DB;
+}
+
+.role{
+color:#00b894;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+footer p{
+color:#072b3b;
+}
+
+hr{
+border:1px solid #12303d;
+width:90%;
+}
+
+</style>
+
 </head>
-<body bgcolor="#080838">
 
-<header>
-  <div style="display:flex; align-items:center;">
-    <img 
-      src="DocNearMe-logo.svg" 
-      alt="DocNearMe Logo" 
-      style="width:300px;">
-    <h1 style="color:#38BDF8; font-size:35px;">
-      Your Health, Our Priority 🏥
-    </h1>
-  </div>
+<body>
 
+<nav>
+<a href="index.html">Home</a>
+<a href="booking.html">Find Doctor</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<header class="header">
+
+<img src="DocNearMe-logo.svg" alt="DocNearMe Logo">
+
+<h1>Your Health, Our Priority 🏥</h1>
 
 </header>
 
-<br><br>
+<section>
 
-<!-- ABOUT SECTION -->
-<section style="text-align:center; padding:40px;">
-  <h1 style="color:#38BDF8; font-size:50px;">About DocNearMe</h1>
-  <p style="color:#D1D5DB; font-size:22px;">We connect patients with the best local doctors instantly.</p>
-  <p style="color:#D1D5DB; font-size:22px;">No delays, no hassle. Just healthcare made simple.</p>
+<h1 class="section-title">About DocNearMe</h1>
+
+<p class="section-text">
+We connect patients with the best local doctors instantly.
+No delays, no hassle. Just healthcare made simple.
+</p>
+
 </section>
 
-<hr style="border: 1px solid #38BDF8; width: 90%;">
+<hr>
 
-<!-- OUR MISSION -->
-<section style="text-align:center; padding:40px;">
-  <h2 style="color:#38BDF8; font-size:40px;">Our Mission 🎯</h2>
-  <br>
-  <p style="color:#D1D5DB; font-size:20px; width:60%; margin:auto;">
-    To make quality healthcare accessible to everyone by connecting patients 
-    with verified, trusted doctors in their area — quickly, easily and affordably.
-  </p>
+<section>
+
+<h2 class="section-title">Our Mission 🎯</h2>
+
+<p class="section-text">
+To make quality healthcare accessible to everyone by connecting patients 
+with verified, trusted doctors in their area — quickly, easily and affordably.
+</p>
+
 </section>
 
-<hr style="border: 1px solid #38BDF8; width: 90%;">
+<hr>
 
-<!-- OUR STORY -->
-<section style="text-align:center; padding:40px;">
-  <h2 style="color:#38BDF8; font-size:40px;">Our Story 📖</h2>
-  <br>
-  <p style="color:#D1D5DB; font-size:20px; width:60%; margin:auto;">
-    DocNearMe was founded by two engineering students who were frustrated 
-    with the difficulty of finding good doctors nearby. We built this platform 
-    to solve a real problem that millions of people face every day.
-  </p>
+<section>
+
+<h2 class="section-title">Our Story 📖</h2>
+
+<p class="section-text">
+DocNearMe was founded by two engineering students who were frustrated 
+with the difficulty of finding good doctors nearby. We built this platform 
+to solve a real problem that millions of people face every day.
+</p>
+
 </section>
 
-<hr style="border: 1px solid #38BDF8; width: 90%;">
+<hr>
 
-<!-- TEAM SECTION -->
-<section style="text-align:center; padding:40px;">
-  <h2 style="color:#38BDF8; font-size:40px;">Meet The Team 👥</h2>
-  <br>
-  <div style="display:flex; justify-content:space-around;">
+<section>
 
-    <div style="background-color:#0a2a5e; padding:30px; border-radius:15px; text-align:center; width:250px;">
-      <h1>👨‍💻</h1>
-      <h3 style="color:white; font-size:22px;">Mayukh Rangnekar</h3>
-      <p style="color:#00b894; font-size:18px;">Co-Founder & Developer</p>
-      <p style="color:#D1D5DB; font-size:15px;">1st Year Computer Engineering Student</p>
-    </div>
+<h2 class="section-title">Meet The Team 👥</h2>
 
-    <div style="background-color:#0a2a5e; padding:30px; border-radius:15px; text-align:center; width:250px;">
-      <h1>👨‍💻</h1>
-      <h3 style="color:white; font-size:22px;">Shaikh Mohd Ali</h3>
-      <p style="color:#00b894; font-size:18px;">Co-Founder & Developer</p>
-      <p style="color:#D1D5DB; font-size:15px;">1st Year Computer Engineering Student</p>
-    </div>
+<div class="team">
 
-  </div>
+<div class="card">
+
+<h1>👨‍💻</h1>
+
+<h3>Mayukh Rangnekar</h3>
+
+<p class="role">Co-Founder & Developer</p>
+
+<p>1st Year Computer Engineering Student</p>
+
+</div>
+
+<div class="card">
+
+<h1>👨‍💻</h1>
+
+<h3>Shaikh Mohd Ali</h3>
+
+<p class="role">Co-Founder & Developer</p>
+
+<p>1st Year Computer Engineering Student</p>
+
+</div>
+
+</div>
+
 </section>
 
-<br>
+<footer>
 
-<footer style="text-align:center; padding:20px;">
-  <hr style="border:1px solid #38BDF8; width:90%;">
-  <p style="color:#D1D5DB;">© 2026 DocNearMe. All rights reserved.</p>
-  <p style="color:#D1D5DB;">Made with ❤️ by Mayukh Rangnekar and SHAIKH MOHD ALI</p>
+<hr>
+
+<p>© 2026 DocNearMe. All rights reserved.</p>
+
+<p>Made with ❤️ by Mayukh Rangnekar and Shaikh Mohd Ali</p>
+
 </footer>
 
 </body>
