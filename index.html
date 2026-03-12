@@ -260,34 +260,54 @@ margin-top:50px;
 
 <script>
 
-function searchDoctor(){
-
-var query=document.getElementById("searchInput").value.toLowerCase();
-var results=document.getElementById("results");
-
-var doctors={
-"eye":"Dr Sneha Iyer - Eye Specialist (Mumbai)",
-"heart":"Dr Aryan Shah - Cardiologist (Delhi)",
-"skin":"Dr Priya Mehta - Dermatologist (Bangalore)",
-"teeth":"Dr Rohan Verma - Dentist (Mumbai)",
-"brain":"Dr Kavya Nair - Neurologist (Chennai)",
-"bone":"Dr Rahul Desai - Orthopedic (Pune)"
+var doctorData = {
+  "eye":   { name: "Dr. Sneha Iyer",   specialty: "Eye Specialist",  city: "Mumbai"    },
+  "heart": { name: "Dr. Aryan Shah",   specialty: "Cardiologist",    city: "Delhi"     },
+  "skin":  { name: "Dr. Priya Mehta",  specialty: "Dermatologist",   city: "Bangalore" },
+  "teeth": { name: "Dr. Rohan Verma",  specialty: "Dentist",         city: "Mumbai"    },
+  "brain": { name: "Dr. Kavya Nair",   specialty: "Neurologist",     city: "Chennai"   },
+  "bone":  { name: "Dr. Rahul Desai",  specialty: "Orthopedic",      city: "Pune"      }
 };
 
-for(var key in doctors){
+function searchDoctor() {
+  var query   = document.getElementById("searchInput").value.toLowerCase();
+  var results = document.getElementById("results");
 
-if(query.includes(key)){
-results.innerHTML="<h3>"+doctors[key]+"</h3>";
-return;
+  for (var key in doctorData) {
+    if (query.includes(key)) {
+      var doc = doctorData[key];
+      results.innerHTML =
+        '<div style="' +
+          'background:white;' +
+          'display:inline-block;' +
+          'padding:25px;' +
+          'border-radius:12px;' +
+          'text-align:center;' +
+          'width:220px;' +
+          'box-shadow:0 5px 20px rgba(0,0,0,0.1);' +
+          'transition:0.3s;' +
+        '">' +
+          '<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="80">' +
+          '<h3 style="margin:10px 0; color:#0F172A;">' + doc.name + '</h3>' +
+          '<p style="margin:5px; color:#555;">' + doc.specialty + '</p>' +
+          '<p style="margin:5px; color:#555;">📍 ' + doc.city + '</p>' +
+          '<button onclick="bookDoctor(\'' + doc.name + '\',\'' + doc.specialty + '\')" ' +
+            'style="margin-top:10px; padding:10px 20px; background:#00b894; border:none; border-radius:20px; color:white; font-size:15px; cursor:pointer;">' +
+            'Book' +
+          '</button>' +
+        '</div>';
+      return;
+    }
+  }
+
+  results.innerHTML = "<p style='color:red; font-size:18px;'>No doctor found. Try: eye, heart, skin, teeth, brain, bone</p>";
 }
 
-}
-
-results.innerHTML="<p style='color:red'>No doctor found</p>";
-
+function bookDoctor(name, specialty) {
+  var params = new URLSearchParams({ doctor: name, specialty: specialty });
+  window.location.href = "booking.html?" + params.toString();
 }
 
 </script>
-
 </body>
 </html>

@@ -8,7 +8,10 @@
 <title>Contact Us - DocNearMe</title>
 
 <style>
-*{font-family:Arial,sans-serif}
+
+*{
+font-family:Arial,sans-serif;
+}
 
 body{
 background-color:#dceeff;
@@ -35,12 +38,36 @@ left:20px;
 text-align:center;
 }
 
+/* NAVBAR */
+
+nav{
+text-align:center;
+padding:15px;
+background:#0a2a5e;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin:25px;
+font-size:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38BDF8;
+}
+
+/* HR LINE */
+
 hr{
 border:2px solid #4c1603;
 margin:0;
 }
 
-/* CARDS */
+/* CARD */
 
 .card{
 background:#0a2a5e;
@@ -53,7 +80,7 @@ margin:auto;
 
 /* FORM */
 
-input,textarea{
+input, textarea{
 width:100%;
 padding:14px;
 border-radius:10px;
@@ -86,7 +113,7 @@ background:#00997a;
 
 <header class="header">
 
-<img src="DocNearMe-logo.svg">
+<img src="DocNearMe-logo.svg" alt="DocNearMe Logo">
 
 <div class="header-text">
 
@@ -99,6 +126,20 @@ background:#00997a;
 </div>
 
 </header>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="booking.html">Book Appointment</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
 
 <hr>
 
